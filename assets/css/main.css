@@ -1,0 +1,71 @@
+:root{
+    --c-dark-grey: #504E4E;
+    --c-yellow-grey: #B4B199;
+    --f-forum: 'Forum';
+    --f-raleway: 'Raleway';
+}
+* { 
+	box-sizing: border-box;
+}
+html, body {
+	min-height: 100%;
+	background: #F6F6F3;
+	color: var(--black);
+    font-family: 'Forum', Helvetica, sans-serif
+}
+#page{
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+.message{
+    background-color: var(--c-yellow-grey);
+}
+.message-text{
+    height: 25px;
+    color: var(--c-dark-grey);
+    font-family: var(--f-forum);
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 25px;
+}
+.navbar{
+    height: 210px;
+    align-items: start;
+    padding-top: 0;
+}
+.social-icon{
+    padding: 0 15px;
+}
+.search-wrapper{
+    padding-left: 15px;
+}
+.search{
+    height: 26px;
+    width: 180px;
+    border-bottom: 1px solid var(--c-dark-grey);
+}
+.search-placeholder{
+    font-family: var(--f-raleway);
+}
+.user-tabs li:nth-child(-n+2){
+    margin-right: 30px;
+}
+.user-tab {
+    color: var(--c-dark-grey);
+    font-family: 'Raleway';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 22px;
+}
+.user-icon{
+    margin-right: 15px;
+}
+
+.rectangle {
+    height: 1px;
+    width: 178px;
+    background-color: var(--c-dark-grey);
+}
