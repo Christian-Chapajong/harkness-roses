@@ -1,19 +1,25 @@
 :root{
     --c-dark-grey: #504E4E;
     --c-yellow-grey: #B4B199;
+    --c-off-white: #F6F6F3;
+    --c-light-grey: #E8E7DF;
     --f-forum: 'Forum';
     --f-raleway: 'Raleway';
 }
 * { 
 	box-sizing: border-box;
 }
+h1{
+    font-size: 55px;
+}
 html, body {
 	min-height: 100%;
-	background: #F6F6F3;
-	color: var(--black);
-    font-family: 'Forum', Helvetica, sans-serif
+	background: #fff;
+	color: var(--c-dark-grey);
+    font-family: 'Forum', Helvetica, sans-serif;
+    font-size: 18px
 }
-#page{
+#page-wrapper{
     position: relative;
     overflow-x: hidden;
     width: 100%;
@@ -30,10 +36,12 @@ html, body {
     letter-spacing: 0;
     line-height: 25px;
 }
-.navbar{
+.custom-navbar{
     height: 210px;
-    align-items: start;
     padding-top: 0;
+}
+.header-row{
+    --bs-gutter-x: 0;
 }
 .social-icon{
     padding: 0 15px;
@@ -49,6 +57,9 @@ html, body {
 .search-placeholder{
     font-family: var(--f-raleway);
 }
+.logo img{
+    z-index: 1;
+}
 .user-tabs li:nth-child(-n+2){
     margin-right: 30px;
 }
@@ -63,9 +74,142 @@ html, body {
 .user-icon{
     margin-right: 15px;
 }
-
-.rectangle {
-    height: 1px;
-    width: 178px;
-    background-color: var(--c-dark-grey);
+.upper-nav-container{
+    height: 153px;
+    margin: 0 30px;
 }
+.lower-nav-row{
+    height: 56px;
+    border-bottom: 1px solid var(--c-light-grey);
+    margin-top: -56px;
+    --bs-gutter-x: 0;
+}
+.lower-nav-container{
+    border-top: 1px solid var(--c-light-grey);
+}
+span#shop-all-roses{
+    margin-right: 33px;
+}
+.arrow-point-down {
+    transform: rotate(90deg);
+}
+.lower-nav-link{
+    height: 25px;
+    padding: 0 30px;
+    font-size: 18px;
+}
+.main-container{
+    padding: 0 30px;
+}
+.hero{
+    height: 470px;
+    margin-top: 30px;
+    background: no-repeat center url("/assets/img/hero.png");
+    background-size: cover;
+
+}
+.hero-cta{
+    width: 554px;
+    background: no-repeat right url("/assets/img/roses-bg.png");
+    background-color: #fff;
+    min-height: 348px;
+}
+.hero-cta-container{
+    padding: 0 40px;
+}
+.primary-btn{
+    height: 50px;
+    width: 178px;
+    font-family: 'Raleway';
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 16px;
+    background-color: var(--c-yellow-grey);
+    border-radius: 0;
+}
+.secondary-btn{
+    height: 50px;
+    width: 172px;
+    color: #B4B199;
+    font-family: 'Raleway';
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 16px;
+    text-align: center;
+    background-color: var(--c-dark-grey);
+    border-radius: 0;
+}
+.website-info-1{
+    margin-top: 60px;
+}
+.website-info-1 p{
+    margin-bottom: 53px;
+}
+.categories-section{
+    background: no-repeat left bottom url("/assets/img/roses-bg-2.png");
+    background-color: var(--c-off-white);
+    padding-bottom: 60px;
+}
+.categories h1{
+    padding-top: 60px;
+}
+.category-card{
+    padding: 0;
+    border-radius: 0;
+}
+.category-card-border{
+    width: fit-content;
+    border: 1px solid var(--c-yellow-grey);
+    
+}
+.category-card .category-card-title {
+    font-family: 'Raleway';
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-top: 30px;
+}
+.category-card .primary-btn{
+    width: 140px;
+    margin-bottom: 30px;
+}
+.category-cards-container{
+    margin-bottom: 30px;
+}
+
+/* Products Section */
+.products-section{
+    padding: 60px 0;
+}
+.products-tabs-nav .nav-arrow{
+    margin: 0 10px;
+}
+.products-tabs-nav .tab{
+    height: 50px;
+    width: 160px;
+    font-size: 23px;
+    align-items: center;
+    justify-content: center;
+}
+.products-tabs-nav .tab.active{
+    border: 1px solid var(--c-yellow-grey);
+    border-radius: 16px;
+}
+.diamond {
+    box-sizing: border-box;
+    height: 34px;
+    width: 34px;
+    border: 1px solid var(--c-yellow-grey);
+    transform: rotate(-45deg);
+  }
+.diamond .left-arrow{
+    transform: rotate(45deg);
+}
+.diamond .right-arrow{
+    transform: rotate(225deg);
+}
+
+
