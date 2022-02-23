@@ -191,6 +191,7 @@ span#shop-all-roses{
     height: 50px;
     width: 160px;
     font-size: 23px;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -210,6 +211,19 @@ span#shop-all-roses{
 }
 .diamond .right-arrow{
     transform: rotate(225deg);
+}
+.products-slider{
+    margin-top: 30px;
+}
+.products-slider-container{
+    margin: 30px;
+}
+.product-card{
+    padding: 15px;
+    border: 1px solid var(--c-yellow-grey);
+}
+.product-card-content img{
+    width: 100%;
 }
 
 
