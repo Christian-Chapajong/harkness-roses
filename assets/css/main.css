@@ -9,21 +9,29 @@
 * { 
 	box-sizing: border-box;
 }
-h1{
-    font-size: 55px;
-}
 html, body {
 	min-height: 100%;
 	background: #fff;
 	color: var(--c-dark-grey);
-    font-family: 'Forum', Helvetica, sans-serif;
+    font-family: var(--f-forum), Helvetica, sans-serif;
     font-size: 18px
+}
+h1{
+    font-size: 55px;
+}
+h3{
+    font-family: var(--f-raleway);
+    font-size: 20px;
+    font-weight: 600;
 }
 #page-wrapper{
     position: relative;
     overflow-x: hidden;
     width: 100%;
     height: 100%;
+}
+section{
+    margin: 60px 0;
 }
 .message{
     background-color: var(--c-yellow-grey);
@@ -65,7 +73,7 @@ html, body {
 }
 .user-tab {
     color: var(--c-dark-grey);
-    font-family: 'Raleway';
+    font-family: var(--f-raleway);
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 0;
@@ -99,7 +107,7 @@ span#shop-all-roses{
     font-size: 18px;
 }
 .main-container{
-    padding: 0 30px;
+    padding: 0 35px;
 }
 .hero{
     height: 470px;
@@ -114,13 +122,13 @@ span#shop-all-roses{
     background-color: #fff;
     min-height: 348px;
 }
-.hero-cta-container{
+.hero-cta-content{
     padding: 0 40px;
 }
 .primary-btn{
     height: 50px;
     width: 178px;
-    font-family: 'Raleway';
+    font-family: var(--f-raleway);
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -132,7 +140,7 @@ span#shop-all-roses{
     height: 50px;
     width: 172px;
     color: #B4B199;
-    font-family: 'Raleway';
+    font-family: var(--f-raleway);
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -165,7 +173,7 @@ span#shop-all-roses{
     
 }
 .category-card .category-card-title {
-    font-family: 'Raleway';
+    font-family: var(--f-raleway);
     font-size: 20px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -181,9 +189,6 @@ span#shop-all-roses{
 }
 
 /* Products Section */
-.products-section{
-    padding: 60px 0;
-}
 .products-tabs-nav .nav-arrow{
     margin: 0 10px;
 }
@@ -231,7 +236,7 @@ span#shop-all-roses{
 }
 .product-card-content .product-name{
     margin-top: 30px;
-    font-family: 'Raleway';
+    font-family: var(--f-raleway);
     font-weight: 600;
     letter-spacing: 0.9px;
     line-height: 16px;
@@ -258,5 +263,114 @@ span#shop-all-roses{
     text-decoration: line-through;
 }
 
+/* Hero 2 */
+.hero-2{
+    height: 550px;
+}
+.hero-2-row{
+    --bs-gutter-x: 30px;
+}
+.hero-2-img-1{
+    width: 36%;
+    background: no-repeat center url("/assets/img/hero-2-img-1.png");
+    background-size: cover;
+    margin-right: 30px;
+}
+.hero-2-img-2{
+    background: no-repeat center url("/assets/img/hero-2-img-2.png");
+    background-size: cover;
+}
+.hero-2-cta{
+    position: absolute;
+    top: 108px;
+    left: 18%;
+}
+.hero-2-cta .hero-cta-content{
+    padding: 0 32px;
+}
 
+/* USPS section */
+.usps {
+    background-color: var(--c-off-white);
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+.usp-title{
+    font-family: var(--f-raleway);
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 16px;
+    margin-top: 25px;
+    margin-bottom: 8px;
+}
+.usp h1.five{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Let us inspire you section */
+.image-row{
+    margin-bottom: 30px;
+}
+.image-row img{
+    width: 20%;
+    padding: 0;
+}
+.image-row img:nth-child(n+2){
+    padding-left: 5px;
+}
+#let-us-inspire-you h3{
+    margin-bottom: 23px;
+}
+.stay-in-touch-row .col-lg-6{
+    height: 176px;
+    padding-top: 30px;
+}
+.stay-in-touch-row .col-lg-6:first-child{
+    border-right: 1px solid var(--c-yellow-grey);
+}
+.email-input-group{
+    height: 50px;
+}
+.email-input-group .email-input{
+    width: 292px;
+    height: 50px;
+    margin-right: 5px;
+    border: none;
+    background-color: var(--c-off-white);
+    font-family: var(--f-raleway);
+    font-size: 14px;
+    padding: 17px;
+}
+.email-input-group .sign-btn{
+    width: 141px;
+}
+
+/* footer */
+footer{
+    border-top: 1px solid var(--c-yellow-grey);
+    padding-top: 55px;
+}
+.footer-title {
+    font-family: var(--f-raleway);
+    font-size: 14px;
+    font-weight: bold;
+}
+.contact-info-table tr td:nth-child(2){
+    padding-bottom: 10px;
+}
+.contact-info-table img{
+    margin-right: 25px;
+    float: left;
+}
+.contact-info-table td{
+    vertical-align: middle;
+}
+.contact-info-table td p{
+    overflow: hidden;
+    margin-bottom: 0;
+}
 
