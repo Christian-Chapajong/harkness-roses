@@ -286,12 +286,12 @@ button.carousel-control{
 .hero{
     height: 470px;
     margin-top: 30px;
-    background: no-repeat center url("/assets/img/hero.png");
+    background: no-repeat center url("../img/hero.png");
     background-size: cover;
 }
 .hero-cta{
     max-width: 554px;
-    background: no-repeat bottom right url("/assets/img/roses-bg.png");
+    background: no-repeat bottom right url("../img/roses-bg.png");
     background-color: #fff;
 }
 .hero-cta-content{
@@ -515,12 +515,12 @@ button.carousel-control{
 }
 .hero-2-img-1{
     width: 36%;
-    background: no-repeat center url("/assets/img/hero-2-image-1.png");
+    background: no-repeat center url("../img/hero-2-image-1.png");
     background-size: cover;
     margin-right: 30px;
 }
 .hero-2-img-2{
-    background: no-repeat center url("/assets/img/hero-2-image-2.png");
+    background: no-repeat center url("../img/hero-2-image-2.png");
     background-size: cover;
 }
 .hero-2-cta{
