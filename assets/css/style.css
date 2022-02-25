@@ -41,6 +41,26 @@ section{
 .main-container{
     padding: 0 35px;
 }
+.btn{
+    font-size: 14px;
+    font-weight: bold;
+    font-family: var(--f-raleway);
+    letter-spacing: 1px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    height: 50px;
+    border-radius: 0;
+}
+.primary-btn{
+    width: 178px;
+    background-color: var(--c-greyish-yellow);
+}
+.secondary-btn{
+    width: 172px;
+    color: #B4B199;
+    background-color: var(--c-dark-grey);
+}
 .p-absolute-center{
     position: absolute;
     top: 50%;
@@ -94,17 +114,6 @@ section{
 .social-icon{
     padding-right: 30px;
 }
-/* .search-wrapper{
-    padding-left: 15px;
-}
-.search{
-    width: 180px;
-    border-bottom: 1px solid var(--c-dark-grey);
-}
-.search-placeholder{
-    font-family: var(--f-raleway);
-    font-size: 14px;
-} */
 .search-wrapper{
     width: 180px;
     border-bottom: 1px solid var(--c-dark-grey);
@@ -235,9 +244,7 @@ span#shop-all-roses{
 .overlay-content .social-icon{
     padding: 15px;
 }
-  
-
-/*Hero */
+/*Hero 1 Section*/
 #hero-1{
     margin: 30px 0 60px;
 }
@@ -246,11 +253,11 @@ span#shop-all-roses{
 }
 .carousel-item img{
     position: absolute;
-    min-width: 1000%;
+    min-width: 1000%; 
     min-height: 1000%;
     left: 50%;
     top: 50%;
-    transform: translateX(-50%) translateY(-50%) scale(0.1);
+    transform: translateX(-50%) translateY(-50%) scale(0.1); /* Causes normal image to act like background image */
     object-fit: cover;
 }
 button.carousel-control{
@@ -290,38 +297,14 @@ button.carousel-control{
 .hero-cta-content{
     padding: 60px 40px;
 }
-.primary-btn{
-    height: 50px;
-    width: 178px;
-    font-family: var(--f-raleway);
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    line-height: 16px;
-    background-color: var(--c-greyish-yellow);
-    border-radius: 0;
-    text-transform: uppercase;
-}
-.secondary-btn{
-    height: 50px;
-    width: 172px;
-    color: #B4B199;
-    font-family: var(--f-raleway);
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    line-height: 16px;
-    text-align: center;
-    background-color: var(--c-dark-grey);
-    border-radius: 0;
-    text-transform: uppercase;
-}
+/* Website info 1 Section*/
 .website-info-1{
     padding-top: 60px;
 }
 .website-info-1 p{
     margin-bottom: 53px;
 }
+/* Categories Section */
 .categories-section{
     background: no-repeat left bottom url("/assets/img/roses-bg-2.png");
     background-color: var(--c-off-white);
@@ -346,6 +329,7 @@ button.carousel-control{
     letter-spacing: 1px;
     line-height: 28px;
     margin-top: 30px;
+    text-transform: uppercase;
 }
 .category-card .primary-btn{
     width: 140px;
@@ -399,7 +383,6 @@ button.carousel-control{
 .products-slider-container{
     margin: 30px;
 }
-
 .product-card-content img{
     width: 100%;
 }
@@ -432,7 +415,6 @@ button.carousel-control{
     line-height: 16px;
     min-height: 32px;
 }
-
 .product-card-content .add-to-basket-btn{
     margin-top: 25px;
     width: 100%;
@@ -469,7 +451,8 @@ button.carousel-control{
     width: 106%;
     height: 40px;
 }
-/* Expert advice */
+
+/* Expert Advice */
 .expert-advice{
     background: no-repeat right bottom url("/assets/img/roses-bg-3.png");
     background-color: var(--c-off-white);
@@ -503,9 +486,6 @@ button.carousel-control{
 .expert-advice .expert-advice-text{
     padding: 0 30px;
 }
-/* .slider .article:nth-child(n+2){
-    margin-left: 30px;
-} */
 .slick-track{
     display: flex;
 }
@@ -526,7 +506,7 @@ button.carousel-control{
     margin: 0 10px;
 }
 
-/* Hero 2 */
+/* Hero 2 Section*/
 .hero-2{
     height: 550px;
 }
@@ -552,7 +532,7 @@ button.carousel-control{
     padding: 20px 30px 30px;
 }
 
-/* USPS section */
+/* USPS Section */
 .usps {
     background-color: var(--c-off-white);
     padding-top: 60px;
@@ -568,7 +548,7 @@ button.carousel-control{
     margin-bottom: 8px;
 }
 
-/* Let us inspire you section */
+/* Let Us Inspire You Section */
 .image-row{
     margin-bottom: 30px;
 }
@@ -609,7 +589,7 @@ button.carousel-control{
     width: 141px;
 }
 
-/* footer */
+/* Footer */
 footer{
     border-top: 1px solid var(--c-greyish-yellow);
     padding-top: 55px;
@@ -641,7 +621,7 @@ footer{
     margin-right: 10px;
 }
 
-/* Responsiveness */
+/* Media Queries*/
 @media only screen and (max-width: 1200px){
     /* Navbar */
     .left-upper-nav-container .navbar-nav{
@@ -651,7 +631,7 @@ footer{
         padding-left: 0;
         margin-top: 10px;
     }
-    /*Expert advice section */
+    /*Expert Advice Section */
     .article-desc-overlap button{
         width: 130px;
     }
@@ -663,15 +643,15 @@ footer{
     h3{
         font-size: 16px;
     }
-    /* Hero 1 */
+    /* Hero 1 Section*/
     .hero .hero-cta-content{
         padding: 30px 20px;
     }
-    /* Categories section*/
+    /* Categories Section*/
     .category-card:nth-child(n+2) .category-card-border{
         border-left: none !important;
     }
-    /*Product section*/
+    /*Product Section*/
     .product-card{
         width: 33%;
         border: 1px solid var(--c-greyish-yellow);
@@ -682,11 +662,11 @@ footer{
     .product-card:nth-child(n+4){
         border-top: none;
     }
-    /*Expert advice section */
+    /*Expert Advice Section */
     .expert-advice-text{
         margin-top: 30px;
     }
-    /*Let Us Inspire You section*/
+    /*Let Us Inspire You Section*/
     .image-row img{
         width: 33%;
     }
@@ -712,18 +692,18 @@ footer{
     h1{
         font-size: 45px;
     }
-    /* Hero 1 */
+    /* Hero 1 Section*/
     .hero .hero-cta{
         width: 80%;
     }
-    /* Categories section*/
+    /* Categories Section*/
     .category-card{
         margin-bottom: 30px;
     }
     .category-card:nth-child(n+2) .category-card-border{
         border-left: 1px solid var(--c-greyish-yellow) !important;
     }
-    /*Product section*/
+    /*Product Section*/
     .product-card{
         width: 50%;
     }
@@ -736,7 +716,7 @@ footer{
     .product-card:nth-child(3), .product-card:nth-child(5){
         border-left: 1px solid var(--c-greyish-yellow) !important;
     }
-    /* Hero 2 */
+    /* Hero 2 Section*/
     .hero-2-cta{
         position: absolute;
         top: 50%;
@@ -744,7 +724,7 @@ footer{
         transform: translate(-50%, -50%);
         width: 80%;
     }
-    /*Let Us Inspire You section*/
+    /*Let Us Inspire You Section*/
     .image-row img{
         width: 50%;
     }
@@ -757,15 +737,15 @@ footer{
     h1{
         font-size: 40px;
     }
-    /* Hero 1*/
+    /* Hero 1 Section*/
     .hero-cta-content{
         padding: 20px 30px;
     }
-    /* Hero 2 */
+    /* Hero 2 Section*/
     .hero-2-img-1{
         margin-right: 15px;
     }
-    /*Product section*/
+    /*Product Section*/
     .product-card{
         width: 100%;
         border: 1px solid var(--c-greyish-yellow) !important;
@@ -776,13 +756,13 @@ footer{
     .product-card:nth-child(4){
         border-left: 1px solid var(--c-greyish-yellow) !important;
     }
-    /*Expert advice section*/
+    /*Expert advice Section*/
     .article{
         margin: 0 auto;
     }
 }
 @media only screen and (max-width: 400px){
-    /*Hero - styling compensates for extremely small screen sizes such as Galaxy Fold*/
+    /*Hero Section - styling compensates for extremely small screen sizes such as Galaxy Fold*/
     h1.hero-cta-title{
         font-size: 22px;
     }
