@@ -1,8 +1,9 @@
 :root{
     --c-dark-grey: #504E4E;
-    --c-yellow-grey: #B4B199;
+    --c-greyish-yellow: #B4B199;
     --c-off-white: #F6F6F3;
     --c-light-grey: #E8E7DF;
+    --c-clay-creek: #878364;
     --f-forum: 'Forum';
     --f-raleway: 'Raleway';
 }
@@ -34,7 +35,7 @@ section{
     margin: 60px 0;
 }
 .message{
-    background-color: var(--c-yellow-grey);
+    background-color: var(--c-greyish-yellow);
 }
 .message-text{
     height: 25px;
@@ -133,7 +134,7 @@ span#shop-all-roses{
     font-weight: bold;
     letter-spacing: 1px;
     line-height: 16px;
-    background-color: var(--c-yellow-grey);
+    background-color: var(--c-greyish-yellow);
     border-radius: 0;
 }
 .secondary-btn{
@@ -169,7 +170,7 @@ span#shop-all-roses{
 }
 .category-card-border{
     width: fit-content;
-    border: 1px solid var(--c-yellow-grey);
+    border: 1px solid var(--c-greyish-yellow);
     
 }
 .category-card .category-card-title {
@@ -201,14 +202,14 @@ span#shop-all-roses{
     justify-content: center;
 }
 .products-tabs-nav .tab.active{
-    border: 1px solid var(--c-yellow-grey);
+    border: 1px solid var(--c-greyish-yellow);
     border-radius: 100px;
 }
 .diamond {
     box-sizing: border-box;
     height: 34px;
     width: 34px;
-    border: 1px solid var(--c-yellow-grey);
+    border: 1px solid var(--c-greyish-yellow);
     transform: rotate(-45deg);
   }
 .diamond .left-arrow{
@@ -229,10 +230,31 @@ span#shop-all-roses{
 .product-card{
     width: 20%;
     padding: 30px;
-    border: 1px solid var(--c-yellow-grey);
+    border: 1px solid var(--c-greyish-yellow);
 }
 .product-card-content img{
     width: 100%;
+}
+.product-img-tag{
+    position: relative;
+}
+.product-img-tag .product-tag{
+    position: absolute;
+    top: 20px;
+    height: 30px;
+    width: 80px;
+}
+.product-img-tag .product-tag.sale{
+    background-color: var(--c-greyish-yellow);
+    color: #fff;
+}
+.product-img-tag .product-tag.new{
+    background-color: var(--c-dark-grey);
+    color: #fff;
+}
+.product-img-tag .product-tag.pre-order{
+    background-color: var(--c-clay-creek);
+    color: #fff;
 }
 .product-card-content .product-name{
     margin-top: 30px;
@@ -330,7 +352,7 @@ span#shop-all-roses{
     padding-top: 30px;
 }
 .stay-in-touch-row .col-lg-6:first-child{
-    border-right: 1px solid var(--c-yellow-grey);
+    border-right: 1px solid var(--c-greyish-yellow);
 }
 .email-input-group{
     height: 50px;
@@ -351,7 +373,7 @@ span#shop-all-roses{
 
 /* footer */
 footer{
-    border-top: 1px solid var(--c-yellow-grey);
+    border-top: 1px solid var(--c-greyish-yellow);
     padding-top: 55px;
 }
 .footer-title {
