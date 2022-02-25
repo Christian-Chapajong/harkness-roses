@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="11px" height="22px" viewBox="0 0 11 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>F8898696-6DC0-4298-BA6C-CD167DC040C0@svg</title>
-    <g id="homepage" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="homepage-v3" transform="translate(-35.000000, -97.000000)" fill="#504E4E">
-            <g id="header" transform="translate(0.000000, 31.000000)">
-                <path d="M46,69.6529023 L46,66.1549023 C45.6535284,66.10725 44.4619309,66 43.074283,66 C40.1787275,66 38.1952379,67.8214023 38.1952379,71.1690977 L38.1952379,74.25 L35,74.25 L35,78.1605 L38.1952379,78.1605 L38.1952379,88 L42.1127642,88 L42.1127642,78.1614023 L45.1787627,78.1614023 L45.6654298,74.2509023 L42.111819,74.2509023 L42.111819,71.5568477 C42.1127642,70.4265547 42.4170869,69.6529023 43.9917624,69.6529023 L46,69.6529023 Z" id="fb-header-desktop"></path>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg width="11" height="22" xmlns="http://www.w3.org/2000/svg"><path d="M11 3.653V.155C10.654.107 9.462 0 8.074 0 5.18 0 3.195 1.821 3.195 5.17v3.08H0v3.91h3.195V22h3.918v-9.839h3.066l.486-3.91H7.112V5.557c0-1.13.305-1.904 1.88-1.904H11Z" fill="#504E4E" fill-rule="evenodd"/></svg>
