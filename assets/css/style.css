@@ -11,7 +11,7 @@
 	box-sizing: border-box;
 }
 html, body {
-	min-height: 100%;
+	height: 100%;
 	background: #fff;
 	color: var(--c-dark-grey);
     font-family: var(--f-forum), Helvetica, sans-serif;
@@ -19,6 +19,8 @@ html, body {
 }
 h1{
     font-size: 55px;
+    margin-bottom: 0;
+    text-align: center;
 }
 h3{
     font-family: var(--f-raleway);
@@ -26,6 +28,7 @@ h3{
     font-weight: 600;
     text-transform: uppercase;
 }
+/* Custom utilities */
 #page-wrapper{
     position: relative;
     overflow-x: hidden;
@@ -35,12 +38,40 @@ h3{
 section{
     margin: 60px 0;
 }
+.main-container{
+    padding: 0 35px;
+}
 .p-absolute-center{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.custom-ruler{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+.custom-ruler .diamond{
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+    margin: 0 -6px;
+}
+.custom-ruler .line {
+    display: inline-block;
+    height: 1px;
+    width: 100px;
+    background-color: var(--c-greyish-yellow);
+}
+.custom-ruler .line.left{
+    margin-right: 15px;
+}
+.custom-ruler .line.right{
+    margin-left: 15px;
+}
+/* Message bar */
 .message{
     background-color: var(--c-greyish-yellow);
 }
@@ -52,6 +83,7 @@ section{
     letter-spacing: 0;
     line-height: 25px;
 }
+/* Navbar for screens >= 992px */
 .custom-navbar{
     height: 210px;
     padding-top: 0;
@@ -60,18 +92,28 @@ section{
     --bs-gutter-x: 0;
 }
 .social-icon{
-    padding: 0 15px;
+    padding-right: 30px;
 }
-.search-wrapper{
+/* .search-wrapper{
     padding-left: 15px;
 }
 .search{
-    height: 26px;
     width: 180px;
     border-bottom: 1px solid var(--c-dark-grey);
 }
 .search-placeholder{
     font-family: var(--f-raleway);
+    font-size: 14px;
+} */
+.search-wrapper{
+    width: 180px;
+    border-bottom: 1px solid var(--c-dark-grey);
+}
+.search{
+    border: none;
+    background-color: transparent;
+    font-family: var(--f-raleway);
+    font-size: 14px;
 }
 .logo img{
     z-index: 1;
@@ -87,12 +129,28 @@ section{
     letter-spacing: 0;
     line-height: 22px;
 }
+.user-tab span{
+    text-transform: uppercase;
+}
 .user-icon{
     margin-right: 15px;
 }
-.upper-nav-container{
+.basket .bubble{
+    position: absolute;
+    top: -7px;
+    left: 14px;
+    font-size: 10px;
+    padding: 0.001px 5px;
+    border-radius: 50%;
+    background-color: var(--c-greyish-yellow);
+}
+.left-upper-nav-container{
     height: 153px;
-    margin: 0 30px;
+    margin-left: 35px;
+}
+.right-upper-nav-container{
+    height: 153px;
+    margin-right: 35px;
 }
 .lower-nav-row{
     height: 56px;
@@ -104,7 +162,7 @@ section{
     border-top: 1px solid var(--c-light-grey);
 }
 span#shop-all-roses{
-    margin-right: 33px;
+    margin-right: 25px;
 }
 .arrow-point-down {
     transform: rotate(90deg);
@@ -114,10 +172,75 @@ span#shop-all-roses{
     padding: 0 30px;
     font-size: 18px;
 }
-.main-container{
-    padding: 0 35px;
+/* Navbar for screens < 992px */
+.nav-toggle{
+    width: 30px;
+    font-size:30px;
+    cursor:pointer;
 }
+.responsive-nav{
+    padding-right: 30px;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: var(--c-off-white);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+  
+.overlay-content {
+    position: relative;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+  
+.overlay a {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 23px;
+    color: var(--c-dark-grey);
+    display: block;
+    transition: 0.3s;
+    font-family: var(--f-raleway);
+    font-weight: 600;
+    width: fit-content;
+    margin: auto;
+}
+  
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+.overlay-content .user-tab{
+    font-size: 23px;
+}
+.overlay-content .search-wrapper{
+    margin: 20px;
+}
+.overlay-content .search::placeholder{
+    font-size: 20px;
+}
+.overlay-content .social-icon{
+    padding: 15px;
+}
+  
+
 /*Hero */
+#hero-1{
+    margin: 30px 0 60px;
+}
 .carousel-item{
     min-height: 470px;
 }
@@ -160,13 +283,12 @@ button.carousel-control{
     background-size: cover;
 }
 .hero-cta{
-    width: 554px;
+    max-width: 554px;
     background: no-repeat bottom right url("/assets/img/roses-bg.png");
     background-color: #fff;
-    min-height: 348px;
 }
 .hero-cta-content{
-    padding: 0 40px;
+    padding: 60px 40px;
 }
 .primary-btn{
     height: 50px;
@@ -330,6 +452,23 @@ button.carousel-control{
     font-size: 18px;
     text-decoration: line-through;
 }
+.pre-order-btn{
+    background-color: transparent;
+    border: 1px solid var(--c-greyish-yellow);
+    color: var(--c-greyish-yellow);
+    margin-top: 25px;
+    width: 100%;
+}
+.pre-order-btn-overlay{
+    position: absolute;
+    top: 30px;
+    left: -3%;
+    right: -64px;
+    border: 1px solid var(--c-greyish-yellow);
+    background-color: transparent;
+    width: 106%;
+    height: 40px;
+}
 /* Expert advice */
 .expert-advice{
     background: no-repeat right bottom url("/assets/img/roses-bg-3.png");
@@ -450,6 +589,9 @@ button.carousel-control{
 .stay-in-touch-row .col-lg-6:first-child{
     border-right: 1px solid var(--c-greyish-yellow);
 }
+.stay-in-touch-row .social-icon{
+    padding: 0 15px;
+}
 .email-input-group{
     height: 50px;
 }
@@ -491,23 +633,39 @@ footer{
     overflow: hidden;
     margin-bottom: 0;
 }
+.bottom-bar{
+    border-top: 1px solid var(--c-greyish-yellow);
+    padding: 15px 0;
+}
+.bottom-bar .cards span{
+    margin-right: 10px;
+}
 
 /* Responsiveness */
 @media only screen and (max-width: 1200px){
+    /* Navbar */
+    .left-upper-nav-container .navbar-nav{
+        flex-direction: column;
+    }
+    .navbar-nav .search-wrapper{
+        padding-left: 0;
+        margin-top: 10px;
+    }
     /*Expert advice section */
     .article-desc-overlap button{
         width: 130px;
     }
 }
 @media only screen and (max-width: 992px){
-    html, body{
-        font-size: 16px;
-    }
     h1{
         font-size: 50px;
     }
     h3{
         font-size: 16px;
+    }
+    /* Hero 1 */
+    .hero .hero-cta-content{
+        padding: 30px 20px;
     }
     /* Categories section*/
     .category-card:nth-child(n+2) .category-card-border{
@@ -528,10 +686,35 @@ footer{
     .expert-advice-text{
         margin-top: 30px;
     }
+    /*Let Us Inspire You section*/
+    .image-row img{
+        width: 33%;
+    }
+    .image-row img:nth-child(n+2){
+        padding-left: 0;
+    }
+    /*Footer*/
+    .top-bar{
+        justify-content: flex-start !important;
+    }
+    .bottom-bar .cards{
+        text-align: left !important;
+        margin-bottom: 1rem;
+    }
+    .footer-contact-us-menu{
+        margin-bottom: 10px;
+    }
+    .bottom-bar div:nth-child(3) p{
+        text-align: left !important;
+    }
 }
 @media only screen and (max-width: 768px){
     h1{
         font-size: 45px;
+    }
+    /* Hero 1 */
+    .hero .hero-cta{
+        width: 80%;
     }
     /* Categories section*/
     .category-card{
@@ -561,10 +744,26 @@ footer{
         transform: translate(-50%, -50%);
         width: 80%;
     }
+    /*Let Us Inspire You section*/
+    .image-row img{
+        width: 50%;
+    }
+    .stay-in-touch-row .col-lg-6:first-child{
+        border-right: none;
+        border-bottom: 1px solid var(--c-greyish-yellow);
+    }
 }
 @media only screen and (max-width: 576px){
     h1{
         font-size: 40px;
+    }
+    /* Hero 1*/
+    .hero-cta-content{
+        padding: 20px 30px;
+    }
+    /* Hero 2 */
+    .hero-2-img-1{
+        margin-right: 15px;
     }
     /*Product section*/
     .product-card{
@@ -580,5 +779,17 @@ footer{
     /*Expert advice section*/
     .article{
         margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 400px){
+    /*Hero - styling compensates for extremely small screen sizes such as Galaxy Fold*/
+    h1.hero-cta-title{
+        font-size: 22px;
+    }
+    .hero button, .hero-2 button{
+        width: auto;
+    }
+    .hero .hero-cta-content{
+        padding: 20px;
     }
 }

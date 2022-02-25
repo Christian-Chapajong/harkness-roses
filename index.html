@@ -31,14 +31,14 @@
                 </span>
             </div>
         </header>
-        <div class="header-container">
+        <div class="header-container d-none d-lg-block">
             <nav class="navbar navbar-expand-lg navbar-light custom-navbar flex-wrap w-100">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar1" aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="header-row row w-100">
                     <div class="col-lg-4">
-                        <div class="upper-nav-container d-flex align-items-center">
+                        <div class="left-upper-nav-container d-flex align-items-center">
                             <div class="collapse navbar-collapse" id="navbar1">
                                 <ul class="navbar-nav me-auto">
                                     <li class="nav-item">
@@ -46,11 +46,9 @@
                                         <img class="ig-icon social-icon" src="assets/img/ig-icon.svg">
                                         <img class="twitter-icon social-icon" src="assets/img/twitter-icon.svg">
                                     </li>
-                                    <li class="nav-item search-wrapper">
-                                        <div class="search">
-                                            <span class="search-placeholder">Search</span>
-                                            <img class="search-icon d-inline-block float-end" src="assets/img/search-icon.svg">
-                                        </div>
+                                    <li class="nav-item search-wrapper d-flex">
+                                        <input type="search" class="search" placeholder="Search">
+                                        <img class="search-icon d-inline-block float-end" src="assets/img/search-icon.svg">
                                     </li>
                                 </ul>
                             </div>
@@ -58,12 +56,12 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="logo text-center">
-                            <img class="img-fluid" src="assets/img/logo.svg">
+                            <img class="img-fluid" src="assets/img/logo.png">
                         </div>
                     </div>
     
                     <div class="col-lg-4">
-                        <div class="upper-nav-container d-flex align-items-center">
+                        <div class="right-upper-nav-container d-flex align-items-center">
                             <div class="collapse navbar-collapse" id="navbar1">
                                 <ul class="navbar-nav ms-auto user-tabs">
                                     <li class="nav-item user-tab">
@@ -74,8 +72,11 @@
                                         <img class="user-icon" src="assets/img/account-icon.svg">
                                         <span>ACCOUNT</span>
                                     </li>
-                                    <li class="nav-item user-tab basket">
-                                        <img class="user-icon" src="assets/img/basket-icon.svg">
+                                    <li class="nav-item user-tab">
+                                        <span class="basket position-relative">
+                                            <img class="user-icon" src="assets/img/basket-icon.svg">
+                                            <span class="bubble">10</span>
+                                        </span>
                                         <span>BASKET</span>
                                     </li>
                                 </ul>
@@ -108,11 +109,67 @@
                 </div>
             </nav>
         </div>
+        <!-- Responsive Nav-->
+        <div class="main-container d-lg-none">
+            <div class="col-12 responsive-nav d-flex align-items-center ">
+                <span class="nav-toggle" onclick="openNav()">&#9776;</span>
+                <img class="img-fluid mx-auto" src="assets/img/logo.png">
+            </div>
+        </div>
+
+        <div id="overlay-nav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content mx-auto">
+                <a href="#">
+                    <img class="fb-icon social-icon" src="assets/img/fb-icon.svg">
+                    <img class="ig-icon social-icon" src="assets/img/ig-icon.svg">
+                    <img class="twitter-icon social-icon" src="assets/img/twitter-icon.svg">
+                </a>
+                <div class="search-wrapper d-flex mx-auto">
+                    <input type="search" class="search" placeholder="Search">
+                    <img class="search-icon d-inline-block float-end" src="assets/img/search-icon.svg">
+                </div>
+                <a href="#">
+                    <div class="user-tab">
+                        <img class="user-icon" src="assets/img/wishlist-icon.svg">
+                        <span>Wishlist</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="user-tab">
+                        <img class="user-icon" src="assets/img/account-icon.svg">
+                        <span>Account</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <div class="user-tab basket position-relative">
+                        <img class="user-icon" src="assets/img/basket-icon.svg">
+                        <span class="bubble">10</span>
+                        <span>BASKET</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <span id="shop-all-roses">Shop All Roses</span>
+                    <img class="arrow-point-down" src="assets/img/arrow-point-right.svg">
+                </a>
+                <a href="#">
+                    <span>Rose card</span>
+                </a>
+                <a href="#">
+                    <span >About Us</span>
+                </a>
+                <a href="#">
+                    <span>Contact Us</span>
+                </a>
+
+
+            </div>
+        </div>
 
         <main>
             <section id="hero-1">
                 <div class="main-container">
-                    <div class="hero col-12 justify-content-center align-items-center">
+                    <div class="hero col-12">
                         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
                               <div class="carousel-item active">
@@ -124,10 +181,15 @@
                               <div class="carousel-item">
                                 <img src="assets/img/hero-2-img-2.png" class="d-block w-100" alt="...">
                               </div>
-                              <div class="hero-cta p-absolute-center text-center d-flex align-items-center">
+                              <div class="hero-cta p-absolute-center text-center">
                                 <div class="hero-cta-content">
                                     <h1 class="hero-cta-title">Valentine's Day Roses</h1>
-                                    <!--Custom ruler-->
+                                    <div class="custom-ruler">
+                                        <span class="line left"></span>
+                                        <span class="ruler-diamond diamond"></span>
+                                        <span class="ruler-diamond diamond"></span>
+                                        <span class="line right"></span>
+                                    </div>
                                     <p class="hero-cta-para text-start">The gift of love that grows! Our Valentine’s Day rose collection is now available to shop online. Show how much you care and bring your garden to life with a perfect lasting gift!</p>
                                     <button class="btn primary-btn">SHOP NOW</button>
                                 </div>
@@ -164,7 +226,12 @@
                 <div class="website-info-1 col-lg-9 mx-auto">
                     <div class="main-container">
                         <h1>The Harkness nursery had its origin in 1879</h1>
-                        <!--Custom ruler-->
+                        <div class="custom-ruler">
+                            <span class="line left"></span>
+                            <span class="ruler-diamond diamond"></span>
+                            <span class="ruler-diamond diamond"></span>
+                            <span class="line right"></span>
+                        </div>
                         <p>
                             For over 135 years Harkness Roses have been ever-present in Britain’s gardens. A look back at the sum of experience gained during the period reveals a great many useful lessons, still relevant today. It would be a pity not to put this resource of knowledge to good use.
                             <br>
@@ -179,7 +246,12 @@
                     <div class="main-container">
                         <div class="categories col-lg-9 mx-auto text-center">
                             <h1>Harkness Roses</h1>
-                            <!--Custom ruler-->
+                            <div class="custom-ruler">
+                                <span class="line left"></span>
+                                <span class="ruler-diamond diamond"></span>
+                                <span class="ruler-diamond diamond"></span>
+                                <span class="line right"></span>
+                            </div>
                             <p>Find the perfect rose for your garden. Browse our full range of bare root, potted or pot grown roses for sale and buy online!</p>
                             <div class="row gx-5 category-cards-row">
                                 <div class="category-card col-12 col-md-4 text-center d-flex justify-content-center" >
@@ -220,7 +292,12 @@
             <section id="products-section">
                 <div class="products-section w-100 text-center">
                     <h1>As Seen At Chelsea</h1>
-                    <!-- Custom ruler -->
+                    <div class="custom-ruler">
+                        <span class="line left"></span>
+                        <span class="ruler-diamond diamond"></span>
+                        <span class="ruler-diamond diamond"></span>
+                        <span class="line right"></span>
+                    </div>
                     <div class="products-tabs-nav mx-auto text-center">
                         <div class="row justify-content-center">
                             <div class="col-2 offset-lg-3 d-flex justify-content-center">
@@ -300,7 +377,10 @@
                                     </div>
                                     <p class="product-name">CHAWTON COTTAGE</p>
                                     <p class="product-price">£18.99</p>
-                                    <button class="primary-btn add-to-basket-btn btn">ADD TO BASKET</button>
+                                    <div class="position-relative">
+                                        <button class="primary-btn pre-order-btn btn">PRE ORDER</button>
+                                        <div class="pre-order-btn-overlay"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -326,7 +406,6 @@
                                                 <button class="secondary-btn btn">READ MORE</button> 
                                             </div>
                                         </div>
-
                                     </div>
                                     <div class="article">
                                         <div class="article-img">
@@ -358,7 +437,12 @@
                         <div class="col-lg-4 expert-advice-text d-flex align-items-center justify-content-center">
                             <div class="text-center">
                                 <h1>Expert Advice</h1>
-                                <!-- Custom Ruler -->
+                                <div class="custom-ruler">
+                                    <span class="line left"></span>
+                                    <span class="ruler-diamond diamond"></span>
+                                    <span class="ruler-diamond diamond"></span>
+                                    <span class="line right"></span>
+                                </div>
                                 <p class="text-start">Find the perfect rose for you garden. Browse our full range of bare root roses for sale and buy online!</p>
                                 <button class="primary-btn btn">VIEW ARTICLES</button>
                                 <div class="nav-arrows-container">
@@ -392,7 +476,12 @@
                             <div class="hero-cta hero-2-cta text-center">
                                 <div class="hero-cta-content">
                                     <h1 class="hero-cta-title">Harkness Masterpiece Collection</h1>
-                                    <!--Custom ruler-->
+                                    <div class="custom-ruler">
+                                        <span class="line left"></span>
+                                        <span class="ruler-diamond diamond"></span>
+                                        <span class="ruler-diamond diamond"></span>
+                                        <span class="line right"></span>
+                                    </div>
                                     <p class="hero-cta-para text-start">The Harkness Climbing Rose Collection are Ideal for covering walls, fences, trellis, arches, pergolas and almost any garden structure. Also great for patio areas.</p>
                                     <button class="btn primary-btn">SHOP NOW</button>
                                 </div>
@@ -404,25 +493,27 @@
 
             <section id="usps">
                 <div class="usps w-100">
-                    <div class="usps col-lg-8 mx-auto text-center">
-                        <div class="row">
-                            <div class="usp col-lg-4 col-sm-12">
-                                <div class="position-relative">
-                                    <img src="assets/img/usp-img-1.png">
-                                    <h1 class="five p-absolute-center">5</h1>
+                    <div class="main-container">
+                        <div class="usps col-lg-8 mx-auto text-center">
+                            <div class="row">
+                                <div class="usp col-lg-4 col-sm-12">
+                                    <div class="position-relative">
+                                        <img src="assets/img/usp-img-1.png">
+                                        <h1 class="five p-absolute-center">5</h1>
+                                    </div>
+                                    <p class="usp-title">5 YEARS GUARANTEE</p>
+                                    <p>If any roses are damaged on receipt or fail to grow, we will replace them free of charge.</p>
                                 </div>
-                                <p class="usp-title">5 YEARS GUARANTEE</p>
-                                <p>If any roses are damaged on receipt or fail to grow, we will replace them free of charge.</p>
-                            </div>
-                            <div class="usp col-lg-4 col-sm-12">
-                                <img src="assets/img/usp-img-2.png">
-                                <p class="usp-title">BRITISH GROWN</p>
-                                <p>Our roses are grown in England, in our rose fields.</p>
-                            </div>
-                            <div class="usp col-lg-4 col-sm-12">
-                                <img src="assets/img/usp-img-3.png">
-                                <p class="usp-title">EXPERT ADVICE & AFTERCARE</p>
-                                <p>We're committed to helping you through every stage of growing roses</p>
+                                <div class="usp col-lg-4 col-sm-12">
+                                    <img src="assets/img/usp-img-2.png">
+                                    <p class="usp-title">BRITISH GROWN</p>
+                                    <p>Our roses are grown in England, in our rose fields.</p>
+                                </div>
+                                <div class="usp col-lg-4 col-sm-12">
+                                    <img src="assets/img/usp-img-3.png">
+                                    <p class="usp-title">EXPERT ADVICE & AFTERCARE</p>
+                                    <p>We're committed to helping you through every stage of growing roses</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -440,13 +531,13 @@
                         <img src="assets/img/inspire-img-5.png">
                     </div>
                     <div class="row stay-in-touch-row">
-                        <div class="col-lg-6 text-center">
+                        <div class="col-lg-6 col-md-6 text-center">
                             <h3>STAY IN TOUCH</h3>
                             <img class="fb-icon social-icon d-inline-block" src="assets/img/fb-icon.svg">
                             <img class="ig-icon social-icon d-inline-block" src="assets/img/ig-icon.svg">
                             <img class="twitter-icon social-icon d-inline-block" src="assets/img/twitter-icon.svg">
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-6">
                             <h3 class="text-center">GET THE LATEST FROM US</h3>
                             <div class="email-input-group d-flex justify-content-center">
                                 <input type="email" class="email-input" placeholder="Email address">
@@ -460,8 +551,8 @@
 
             <footer>
                 <div class="main-container">
-                    <div class="row justify-content-between">
-                        <div class="col-lg-4">
+                    <div class="row top-bar justify-content-between">
+                        <div class="col-lg-4 col-md-6 col-sm-6 footer-contact-us-menu">
                             <p class="footer-title">CONTACT US</p>
                             <table class="contact-info-table">
                                 <tr>
@@ -490,7 +581,7 @@
                                 </tr>
                             </table>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
                             <p class="footer-title">OPENING HOURS</p>
                             <p>
                                 Monday - Friday: 
@@ -500,7 +591,7 @@
                                 Saturday: 10am-4pm
                             </p>
                         </div>
-                        <div class="col-lg-2">
+                        <div class="col-lg-2 col-md-3 col-sm-3 col-6">
                             <p class="footer-title">INFO</p>
                             <p>
                                 Become A Stockist
@@ -514,7 +605,7 @@
                                 Reviews
                             </p>
                         </div>
-                        <div class="col-lg-1">
+                        <div class="col-lg-1 col-md-2 col-sm-2 col-6">
                             <p class="footer-title">CUSTOMERS</p>
                             <p>
                                 About us
@@ -526,7 +617,7 @@
                                 Account
                             </p>
                         </div>
-                        <div class="col-lg-1">
+                        <div class="col-lg-1 col-md-2 col-sm-2 col-6">
                             <p class="footer-title">HELP</p>
                             <p>
                                 Delivery
@@ -535,6 +626,28 @@
                                 <br>
                                 Refund Policy
                             </p>
+                        </div>
+                    </div>
+                    <div class="row bottom-bar">
+                        <div class="col-lg-4 ">
+                            <p>Copyright 2017 - 2021 Harkness Roses. All Rights Reserved</p>
+                        </div>
+                        <div class="col-lg-4 text-center cards">
+                            <span>
+                                <img src="assets/img/visa.png">
+                            </span>
+                            <span>
+                                <img src="assets/img/paypal.png">
+                            </span>
+                            <span>
+                                <img src="assets/img/mastercard.png">
+                            </span>
+                            <span>
+                                <img src="assets/img/maestro.png">
+                            </span>
+                        </div>
+                        <div class="col-lg-3 offset-lg-1">
+                            <p class="text-end">Ecommerce Website Design by ShopWired </p>
                         </div>
                     </div>
                 </div>
@@ -578,6 +691,14 @@
                 }
             ]
             });
+        
+            function openNav() {
+                console.log("HEllo");
+                $("#overlay-nav").css("width", "100%");
+            }
+            const closeNav = () => {
+                $("#overlay-nav").css("width", "0%");
+            }
         
         // if (!$(".slider .article:first-child").hasClass("slick-current")) {
         //     $(".shadow").show();
