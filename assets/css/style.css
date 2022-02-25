@@ -515,12 +515,12 @@ button.carousel-control{
 }
 .hero-2-img-1{
     width: 36%;
-    background: no-repeat center url("/assets/img/hero-2-img-1.png");
+    background: no-repeat center url("/assets/img/hero-2-image-1.png");
     background-size: cover;
     margin-right: 30px;
 }
 .hero-2-img-2{
-    background: no-repeat center url("/assets/img/hero-2-img-2.png");
+    background: no-repeat center url("/assets/img/hero-2-image-2.png");
     background-size: cover;
 }
 .hero-2-cta{
