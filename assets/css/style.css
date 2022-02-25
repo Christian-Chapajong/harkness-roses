@@ -24,6 +24,7 @@ h3{
     font-family: var(--f-raleway);
     font-size: 20px;
     font-weight: 600;
+    text-transform: uppercase;
 }
 #page-wrapper{
     position: relative;
@@ -33,6 +34,12 @@ h3{
 }
 section{
     margin: 60px 0;
+}
+.p-absolute-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .message{
     background-color: var(--c-greyish-yellow);
@@ -110,16 +117,51 @@ span#shop-all-roses{
 .main-container{
     padding: 0 35px;
 }
+/*Hero */
+.carousel-item{
+    min-height: 470px;
+}
+.carousel-item img{
+    position: absolute;
+    min-width: 1000%;
+    min-height: 1000%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(0.1);
+    object-fit: cover;
+}
+button.carousel-control{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+.carousel-controls-container{
+    margin-top: 15px;
+}
+.carousel-indicators{
+    position: relative;
+    margin: 0 15px;
+}
+.carousel-indicators .diamond{
+    height: 10px;
+    width: 10px;
+    border: none;
+    background-color: var(--c-greyish-yellow);
+    margin: 0 5px;
+}
 .hero{
     height: 470px;
     margin-top: 30px;
     background: no-repeat center url("/assets/img/hero.png");
     background-size: cover;
-
 }
 .hero-cta{
     width: 554px;
-    background: no-repeat right url("/assets/img/roses-bg.png");
+    background: no-repeat bottom right url("/assets/img/roses-bg.png");
     background-color: #fff;
     min-height: 348px;
 }
@@ -136,6 +178,7 @@ span#shop-all-roses{
     line-height: 16px;
     background-color: var(--c-greyish-yellow);
     border-radius: 0;
+    text-transform: uppercase;
 }
 .secondary-btn{
     height: 50px;
@@ -149,9 +192,10 @@ span#shop-all-roses{
     text-align: center;
     background-color: var(--c-dark-grey);
     border-radius: 0;
+    text-transform: uppercase;
 }
 .website-info-1{
-    margin-top: 60px;
+    padding-top: 60px;
 }
 .website-info-1 p{
     margin-bottom: 53px;
@@ -185,7 +229,7 @@ span#shop-all-roses{
     width: 140px;
     margin-bottom: 30px;
 }
-.category-cards-container{
+.category-cards-row{
     margin-bottom: 30px;
 }
 
@@ -204,6 +248,7 @@ span#shop-all-roses{
 .products-tabs-nav .tab.active{
     border: 1px solid var(--c-greyish-yellow);
     border-radius: 100px;
+    padding: 0 33px;
 }
 .diamond {
     box-sizing: border-box;
@@ -221,17 +266,18 @@ span#shop-all-roses{
 .products-slider{
     margin: 30px 0;
 }
+.product-card{
+    width: 20%;
+    padding: 30px;
+    border: 1px solid var(--c-greyish-yellow);
+}
 .products-slider .product-card:nth-child(n+2){
     border-left: none;  /*Removes left border from all the product cards other than the first*/
 }
 .products-slider-container{
     margin: 30px;
 }
-.product-card{
-    width: 20%;
-    padding: 30px;
-    border: 1px solid var(--c-greyish-yellow);
-}
+
 .product-card-content img{
     width: 100%;
 }
@@ -284,6 +330,62 @@ span#shop-all-roses{
     font-size: 18px;
     text-decoration: line-through;
 }
+/* Expert advice */
+.expert-advice{
+    background: no-repeat right bottom url("/assets/img/roses-bg-3.png");
+    background-color: var(--c-off-white);
+    padding: 60px 0;
+}
+.article{
+    vertical-align: top;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    margin-right: 30px;
+}
+.article-desc{
+    display: flex;
+    height: 100%;
+}
+.article-desc-overlap{
+    background-color: #fff;
+    margin: -30px 30px 0;
+    padding: 30px;
+    text-align: center;
+}
+.article-desc-overlap p{
+    height: 70px;
+    overflow: hidden;
+    text-align: left;
+}
+.article-desc-overlap button{
+    width: 153px;
+}
+.expert-advice .expert-advice-text{
+    padding: 0 30px;
+}
+/* .slider .article:nth-child(n+2){
+    margin-left: 30px;
+} */
+.slick-track{
+    display: flex;
+}
+
+.slider-wrapper{
+    overflow: hidden;   
+}
+.article-img img{
+    position: relative;
+    z-index: -1;
+    width: 100%;
+}
+
+.nav-arrows-container{
+    margin-top: 30px;
+}
+.nav-arrows-container .nav-arrow{
+    margin: 0 10px;
+}
 
 /* Hero 2 */
 .hero-2{
@@ -308,7 +410,7 @@ span#shop-all-roses{
     left: 18%;
 }
 .hero-2-cta .hero-cta-content{
-    padding: 0 32px;
+    padding: 20px 30px 30px;
 }
 
 /* USPS section */
@@ -325,12 +427,6 @@ span#shop-all-roses{
     line-height: 16px;
     margin-top: 25px;
     margin-bottom: 8px;
-}
-.usp h1.five{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 /* Let us inspire you section */
@@ -396,3 +492,93 @@ footer{
     margin-bottom: 0;
 }
 
+/* Responsiveness */
+@media only screen and (max-width: 1200px){
+    /*Expert advice section */
+    .article-desc-overlap button{
+        width: 130px;
+    }
+}
+@media only screen and (max-width: 992px){
+    html, body{
+        font-size: 16px;
+    }
+    h1{
+        font-size: 50px;
+    }
+    h3{
+        font-size: 16px;
+    }
+    /* Categories section*/
+    .category-card:nth-child(n+2) .category-card-border{
+        border-left: none !important;
+    }
+    /*Product section*/
+    .product-card{
+        width: 33%;
+        border: 1px solid var(--c-greyish-yellow);
+    }
+    .product-card:nth-child(4){
+        border-left: 1px solid var(--c-greyish-yellow) !important;
+    }
+    .product-card:nth-child(n+4){
+        border-top: none;
+    }
+    /*Expert advice section */
+    .expert-advice-text{
+        margin-top: 30px;
+    }
+}
+@media only screen and (max-width: 768px){
+    h1{
+        font-size: 45px;
+    }
+    /* Categories section*/
+    .category-card{
+        margin-bottom: 30px;
+    }
+    .category-card:nth-child(n+2) .category-card-border{
+        border-left: 1px solid var(--c-greyish-yellow) !important;
+    }
+    /*Product section*/
+    .product-card{
+        width: 50%;
+    }
+    .product-card:nth-child(3){
+        border-top: none;
+    }
+    .product-card:nth-child(4){
+        border-left: none !important;
+    }
+    .product-card:nth-child(3), .product-card:nth-child(5){
+        border-left: 1px solid var(--c-greyish-yellow) !important;
+    }
+    /* Hero 2 */
+    .hero-2-cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 576px){
+    h1{
+        font-size: 40px;
+    }
+    /*Product section*/
+    .product-card{
+        width: 100%;
+        border: 1px solid var(--c-greyish-yellow) !important;
+    }
+    .product-card:nth-child(n+2){
+        border-top: none !important;
+    }
+    .product-card:nth-child(4){
+        border-left: 1px solid var(--c-greyish-yellow) !important;
+    }
+    /*Expert advice section*/
+    .article{
+        margin: 0 auto;
+    }
+}
